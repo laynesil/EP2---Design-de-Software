@@ -7,3 +7,11 @@ def cria_baralho():
             baralho.append(i+k)
     return baralho
 print(cria_baralho())
+
+def extrai_naipe(carta):
+    naipe = carta[-1]
+    return naipe 
+
+def extrai_valor(carta):
+    valor = carta[:-1]
+    return valor
