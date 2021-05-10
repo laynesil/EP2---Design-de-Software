@@ -44,5 +44,11 @@ def empilha(baralho, i_o, i_d):
     remove_carta = baralho.pop(i_o)
     baralho[i_d] = remove_carta
     return baralho
+
+def possui_movimentos_possiveis(baralho):
+    for e in range(len(baralho)):
+        if lista_movimentos_possiveis(baralho, e) == [1] or lista_movimentos_possiveis(baralho, e) == [3] or lista_movimentos_possiveis(baralho, e) == [1, 3]:
+            return True
+    return False
     
     
