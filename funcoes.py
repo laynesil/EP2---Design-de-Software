@@ -39,3 +39,10 @@ def lista_movimentos_possiveis(baralho, indice):
         
         else:
             return []
+
+def empilha(baralho, i_o, i_d):
+    remove_carta = baralho.pop(i_o)
+    baralho[i_d] = remove_carta
+    return baralho
+    
+    
