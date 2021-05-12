@@ -9,7 +9,6 @@ def cria_baralho():
             baralho.append(i+k)
     random.shuffle(baralho)      
     return baralho
-print(cria_baralho())
 
 #função para descobrir qual o naipe da carta
 def extrai_naipe(carta):
@@ -65,4 +64,15 @@ def cartas(baralho):
     for i in baralho:
         cartas += '{}. {} \n'.format(baralho.index(i)+1, i)
     return cartas
+
+#funcao para colorir cartas 
+def cor(carta):
+    if extrai_naipe(carta) == '♦':  
+        return f"\033[34m {carta}"
+    elif extrai_naipe(carta) == '♥':
+        return f"\033[35m {carta}"
+    elif extrai_naipe(carta) == '♠':
+        return f"\033[31m {carta}"
+    else:
+        return f"\033[33m {carta}"
     
