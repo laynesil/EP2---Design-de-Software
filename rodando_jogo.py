@@ -32,18 +32,6 @@ for carta in baralho_do_jogador:
 e_invalida = True
 while e_invalida:
     while len(baralho_do_jogador) > 1 and possui_movimentos_possiveis(baralho_do_jogador) == True:
-                while len(baralho_do_jogador) > 1 and possui_movimentos_possiveis(baralho_do_jogador) == True:
-
-                    if len(baralho_do_jogador) == 1 and possui_movimentos_possiveis(baralho_do_jogador) != True:
-                        print ('Fim do jogo. Obrigado por jogar!')
-                        jogar_dnv = input('Você deseja jogar novamente ?(s/n) ')
-                        if jogar_dnv == 's':
-                            jogando = True
-                            for cada, car in enumerate(baralho_do_jogador):
-                                arg = cada + 1
-                                print(('{0}'.format(arg))+ ' ' + cor(car))
-                        else:
-                            jogando = False
 
                 carta = int(input('Escolha o número de uma carta para jogar de {0} a {1}:'.format(1, len(baralho_do_jogador))))
 
@@ -86,3 +74,14 @@ while e_invalida:
                         else:
                             print('Digite uma entrada válida!')
                             mov = True
+                    
+                        if len(baralho_do_jogador) == 1 and possui_movimentos_possiveis(baralho_do_jogador) != True:
+                            print ('Fim do jogo. Obrigado por jogar!')
+                        jogar_dnv = input('Você deseja jogar novamente ?(s/n) ')
+                        if jogar_dnv == 's':
+                            jogando = True
+                            for cada, car in enumerate(baralho_do_jogador):
+                                arg = cada + 1
+                                print(('{0}'.format(arg))+ ' ' + cor(car))
+                        else:
+                            jogando = False
